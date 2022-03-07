@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="TecnoMedia.Maestra" %>
+
+<!DOCTYPE html>
+<html lang="es" id="principal" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>TecnoMedia</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div id="sidebar" class="menu-collapsed">
+            <div id="side-Header">
+                <div id="side-Title"><span>TecnoMedia</span></div>
+                <div id="menu-btn">
+                    <div id="ham"><img src="img/hamb.png"></div>
+                </div>
+            </div>
+            
+            <div id="profile">
+                 <div id="photo"><img runat="server" id="profilePic" src="img/icon.png"></div>
+                <div runat="server" id="name"><span runat="server" id="nameUsr">Usuario</span></div>
+            </div>
+
+            <div id="menu-items">
+                <div class="item">
+                    <asp:HyperLink ID="ArticulosSideBar" NavigateUrl="~/Inicio.aspx" runat="server">
+                        <div class="title"><span>Articulos</span></div>
+                    </asp:HyperLink>
+                </div>
+                <div class="item separator"></div>
+                <div class="item">
+                    <asp:HyperLink ID="NosotrosSideBar" NavigateUrl="~/Conocenos.aspx" runat="server">
+                        <div class="title"><span>Conocenos</span></div>
+                    </asp:HyperLink>
+                </div>
+                <div class="item separator"></div>
+                <div class="item" runat="server" id="Crear_Articulo">
+                    <asp:HyperLink ID="crearSideBar" NavigateUrl="~/CrearArticulo.aspx" runat="server">
+                        <div class="title"><span>Nuevo Articulo</span></div>
+                    </asp:HyperLink>
+                </div>
+                <div class="item separator"></div>
+                <div class="item">
+                    <asp:HyperLink ID="CerrarSesionSideBar" NavigateUrl="~/IniciarSesion.aspx" runat="server">
+                        <div class="title"><span>Cerrar Sesión</span></div>
+                    </asp:HyperLink>
+                </div>
+                <div class="item separator"></div>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="barra">
+                <asp:HyperLink ID="InicioHeader" NavigateUrl="~/Inicio.aspx" runat="server">
+                        <h1 class="no-margin"><span>TecnoMedia</span></h1>
+                 </asp:HyperLink>
+            </div>
+        </div>
+    </header>
+
+    <asp:ContentPlaceHolder ID="ContenidoMaestro" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+            
